@@ -1,3 +1,5 @@
+-- Ciro Brodmann, Lukas Buchli, Felix Reiniger
+
 insert into "Student" values (22173270, 'Lukas', 'Fernsehli', 'lukas.fernsehli@west.ch'),
                              (22173271, 'Felix', 'Ferkler', 'felix.ferkler@west.ch'),
                              (22173272, 'Ciro', 'de la Baguette', 'ciro.delabaguette@west.ch'),
