@@ -42,4 +42,4 @@ insert into "Rating" ("Rating", "Student", "Lecturer")
            ('War unterhaltsam. Ein bisschen zu viel Datenbanken', 7, 1),
            ('Gute Vorlesung. Episch.', 7, 4),
            ('Habe die ganze Vorlesung Meelee gespielt. Kann ich echt empfehlen', 5, 2),
-           ('Fachliche katastrophe', 6, 6),
+           ('Fachliche katastrophe', 6, 6);
