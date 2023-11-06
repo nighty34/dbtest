@@ -1,13 +1,11 @@
 drop database if exists lecturerratingdb;
 
-
-
 drop user if exists ratinguser;
 create user ratinguser;
 
 create database lecturerratingdb WITH OWNER ratinguser ENCODING 'UTF-8';
 -- ^ replace 'schema' with 'database' if you want to change back to databases
--- grant connect on database lecturerratingdb to ratinguser;
+grant connect on database lecturerratingdb to ratinguser;
 
 \c lecturerratingdb
 
