@@ -23,8 +23,8 @@ insert into "Module" ("Identifier", "Description")
            ('RheKi', 'Rhecht K(om)ische Vorlesung mit vielen random Anekdoten über das wunderliche Leben des Bruno Sternath'),
            ('FP', 'Fuck Paper – Weiterbildung für Dozenten. Bringt ihnen bei, digitale Prüfungen zu schreiben, damit sie den armen Studenten nicht mehr sadistisch beim Auf-Papier-Programmieren zusehen können'),
            ('VELO1', 'Rennen mit dem legendären WEST-Velo™ um den Campus. Der Schnellste gewinnt das Legendäre WEST-Velo™ (oder darf es zumindest auf Ricardo ersteigern).'),
-           ('DMI', 'TODO ich bruch da no es akronym danke vielmal @Felix @Lukas me tired me brain no work well no more'),
-           ('AutSpr', 'TODO');
+           ('DMI', 'Doofe Mitarbeiter Idealisieren - Lerne hier so besessen von deinen dümmsten Mitarbeitern zu werden, dass du sie gar nicht mehr rausschmeissen möchtest'),
+           ('AutSpr', 'Sprachkurs um endlich die Gefühle und Bedürfnisse deines Autos zu verstehen');
 
 insert into "LecturerModule" ("Lecturer", "Module")
     values (1, 1),
@@ -35,5 +35,11 @@ insert into "LecturerModule" ("Lecturer", "Module")
            (5, 3),
            (7, 7);
 
--- insert into "Rating" ("Rating", "Student", "Lecturer")
---     values ()
+insert into "Rating" ("Rating", "Student", "Lecturer")
+    values ('Geht einem nur auf die Nerven und kann nichts. Bitte austauschen', 3, 6),
+           ('Ist in FP viel zu sehr ins Detail gegangen. Bin nicht mitgekommen', 1, 3),
+           ('Hat die Prüfung extra schwierig gemacht. Bin voll durchgefallen.', 2, 5),
+           ('War unterhaltsam. Ein bisschen zu viel Datenbanken', 7, 1),
+           ('Gute Vorlesung. Episch.', 7, 4),
+           ('Habe die ganze Vorlesung Meelee gespielt. Kann ich echt empfehlen', 5, 2),
+           ('Fachliche katastrophe', 6, 6),
