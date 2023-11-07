@@ -9,11 +9,7 @@ grant connect on database lecturerratingdb to ratinguser;
 
 \c lecturerratingdb
 
-create schema lecturerratingschema;
-
-grant select, insert, update, delete on all tables in schema lecturerratingschema to ratinguser;
-
-SET SCHEMA 'lecturerratingschema';
+grant all privileges on database lecturerratingdb to ratinguser;
 
 \i 2_schema.sql
 \i 3_inserts.sql

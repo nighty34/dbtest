@@ -1,0 +1,9 @@
+services:
+  db:
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    environment:
+      POSTGRES_PASSWORD: postgres
+    restart: always
+    tmpfs: /var/lib/postgresql/data
