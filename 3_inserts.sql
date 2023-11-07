@@ -42,5 +42,5 @@ insert into "Rating" ("Rating", "Student", "Lecturer")
            ('Hat die Prüfung extra schwierig gemacht. Bin voll durchgefallen.', 2, 5),
            ('War unterhaltsam. Ein bisschen zu viel Datenbanken', 7, 1),
            ('Gute Vorlesung. Episch.', 7, 4),
-           ('Habe die ganze Vorlesung Meelee gespielt. Kann ich echt empfehlen', 5, 2),
+           ('Habe die ganze Vorlesung Melee gespielt. Kann ich echt empfehlen', 5, 2),
            ('Fachliche katastrophe', 6, 6);
