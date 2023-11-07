@@ -27,14 +27,13 @@ insert into module (identifier, description)
            ('DMI', 'Doofe Mitarbeiter Idealisieren - Lerne hier so besessen von deinen dümmsten Mitarbeitern zu werden, dass du sie gar nicht mehr rausschmeissen möchtest'),
            ('AutSpr', 'Sprachkurs um endlich die Gefühle und Bedürfnisse deines Autos zu verstehen');
 
-insert into lecturer_module (lecturer, module)
-    values (1, 1),
-           (6, 5),
-           (3, 4),
-           (2, 2),
-           (4, 6),
-           (5, 3),
-           (7, 7);
+insert into lecturer_module values (1, 1),
+                                   (6, 5),
+                                   (3, 4),
+                                   (2, 2),
+                                   (4, 6),
+                                   (5, 3),
+                                   (7, 7);
 
 insert into rating (rating, student, lecturer)
     values ('Geht einem nur auf die Nerven und kann nichts. Bitte austauschen', 22173272, 6),

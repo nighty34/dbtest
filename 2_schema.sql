@@ -32,7 +32,7 @@ CREATE TABLE module
 
 CREATE TABLE lecturer_module
 (
-    id       serial  PRIMARY KEY,
     lecturer INTEGER NOT NULL REFERENCES lecturer,
-    module   INTEGER NOT NULL REFERENCES module
+    module   INTEGER NOT NULL REFERENCES module,
+    PRIMARY KEY (lecturer, module)
 );
