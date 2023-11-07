@@ -11,6 +11,7 @@ grant connect on database lecturerratingdb to ratinguser;
 
 grant all privileges on database lecturerratingdb to ratinguser;
 
+\i 1_extensions.sql
 \i 2_schema.sql
 \i 3_inserts.sql
 \i 4_constraints.sql

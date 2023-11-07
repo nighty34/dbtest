@@ -1,43 +1,38 @@
-create table "Student"
+CREATE TABLE student
 (
-    "MatriculationNo" INTEGER
-        primary key,
-    "FirstName"       VARCHAR(25)  not null,
-    "LastName"        VARCHAR(25)  not null,
-    "EmailAddress"    VARCHAR(100) not null
+    matriculation_no INTEGER      PRIMARY KEY,
+    first_name       VARCHAR(25)  NOT NULL,
+    last_name        VARCHAR(25)  NOT NULL,
+    email_address    VARCHAR(100) NOT NULL
 );
 
-create table "Lecturer"
+CREATE TABLE lecturer
 (
-    "Id"           serial
-        primary key,
-    "FirstName"    VARCHAR(25)  not null,
-    "LastName"     VARCHAR(25)  not null,
-    "EmailAddress" VARCHAR(100) not null,
-    "ShortName"    VARCHAR(6)   not null
+    id            serial       PRIMARY KEY,
+    first_name    VARCHAR(25)  NOT NULL,
+    last_name     VARCHAR(25)  NOT NULL,
+    email_address VARCHAR(100) NOT NULL,
+    short_name    VARCHAR(6)   NOT NULL
 );
 
-create table "Rating"
+CREATE TABLE rating
 (
-    "Id"       serial
-        primary key,
-    "Rating"   TEXT    not null,
-    "Student"  INTEGER not null,
-    "Lecturer" INTEGER not null
+    id       serial  PRIMARY KEY,
+    rating   TEXT    NOT NULL,
+    student  INTEGER NOT NULL REFERENCES student,
+    lecturer INTEGER NOT NULL REFERENCES lecturer
 );
 
-create table "LecturerModule"
+CREATE TABLE module
 (
-    "Id"       serial
-        primary key,
-    "Lecturer" INTEGER not null,
-    "Module"   INTEGER not null
+    id          serial  PRIMARY KEY,
+    identifier  VARCHAR NOT NULL,
+    description TEXT
 );
 
-create table "Module"
+CREATE TABLE lecturer_module
 (
-    "Id"          serial
-        primary key,
-    "Identifier"  VARCHAR not null,
-    "Description" TEXT
+    id       serial  PRIMARY KEY,
+    lecturer INTEGER NOT NULL REFERENCES lecturer,
+    module   INTEGER NOT NULL REFERENCES module
 );
