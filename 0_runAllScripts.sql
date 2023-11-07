@@ -7,7 +7,7 @@ create database lecturerratingdb WITH OWNER ratinguser ENCODING 'UTF-8';
 -- ^ replace 'schema' with 'database' if you want to change back to databases
 grant connect on database lecturerratingdb to ratinguser;
 
-\c lecturerratingdb
+\c lecturerratingdb ratinguser
 
 grant all privileges on database lecturerratingdb to ratinguser;
 
