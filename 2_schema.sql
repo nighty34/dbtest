@@ -1,9 +1,9 @@
 CREATE TABLE student
 (
-    matriculation_no INTEGER      PRIMARY KEY,
-    first_name       VARCHAR(25)  NOT NULL,
-    last_name        VARCHAR(25)  NOT NULL,
-    email_address    VARCHAR(100) NOT NULL
+    matriculation_no   INTEGER      PRIMARY KEY,
+    first_name         VARCHAR(25)  NOT NULL,
+    last_name          VARCHAR(25)  NOT NULL,
+    email_address      VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE lecturer
@@ -17,10 +17,11 @@ CREATE TABLE lecturer
 
 CREATE TABLE rating
 (
-    id       serial  PRIMARY KEY,
-    rating   TEXT    NOT NULL,
-    student  INTEGER NOT NULL REFERENCES student,
-    lecturer INTEGER NOT NULL REFERENCES lecturer
+    id          serial    PRIMARY KEY,
+    rating      TEXT      NOT NULL,
+    student     INTEGER   NOT NULL REFERENCES student,
+    lecturer    INTEGER   NOT NULL REFERENCES lecturer,
+    timestamp   TIMESTAMP NOT NULL DEFAULT now()
 );
 
 CREATE TABLE module

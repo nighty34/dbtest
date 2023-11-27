@@ -15,3 +15,4 @@ grant all privileges on database lecturerratingdb to ratinguser;
 \i 2_schema.sql
 \i 3_inserts.sql
 \i 4_constraints.sql
+\i 5_queries.sql
