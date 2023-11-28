@@ -72,7 +72,7 @@ FROM
     student
 JOIN rating ON student.matriculation_no = rating.student
 JOIN lecturer ON lecturer.id = rating.lecturer
-GROUP BY rating.lecturer
+GROUP BY student.first_name
 ;
 
 
