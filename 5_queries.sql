@@ -68,7 +68,7 @@ SELECT
 FROM 
     student
 JOIN rating ON rating.student = student.matriculation_no
-WINDOW rw AS (GROUP BY rating.lecturer)
+WINDOW rw GROUP BY rating.lecturer
 
 
 -- Call View as select
