@@ -83,7 +83,7 @@ CREATE VIEW lecturer_joel_view AS SELECT
 FROM
 	lecturer
 WHERE
-	first_name = "Jöel";
+	first_name = 'Jöel';
 
 
 -- Call View and Update
