@@ -71,9 +71,7 @@ SELECT
 FROM 
     student
 JOIN rating ON student.matriculation_no = rating.student
-JOIN lecturer ON lecturer.id = rating.lecturer
-GROUP BY student.first_name
-;
+JOIN lecturer ON lecturer.id = rating.lecturer;
 
 
 -- Call View as select
@@ -87,6 +85,7 @@ GROUP BY student.first_name
 -- Creates a view that contains all lecturer with the name "Jöel"
 
 CREATE VIEW lecturer_joel_view AS SELECT
+    id,
     first_name,
     last_name,
     email_address,
@@ -98,4 +97,8 @@ WHERE
 
 
 -- Call View and Update
+
+UPDATE lecturer_joel_view SET first_name = 'Joël' WHERE id = 6;
+
+select * from lecturer;
 
