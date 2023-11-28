@@ -83,21 +83,4 @@ SELECT * from ratings;
 -- Updatable View
 -- Creates a view that contains all lecturer with the name "Jöel"
 
-CREATE VIEW lecturer_joel_view AS SELECT
-    id,
-    first_name,
-    last_name,
-    email_address,
-    short_name
-FROM
-	lecturer
-WHERE
-	first_name = 'Jöel';
-
-
--- Call View and Update
-
-UPDATE lecturer_joel_view SET first_name = 'Joël' WHERE id = 6;
-
-select * from lecturer;
 
