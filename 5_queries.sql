@@ -68,11 +68,12 @@ SELECT
   rating.rating,
   lecturer.first_name,
   lecturer.last_name
-FROM student
-JOIN rating
-  ON student.matriculation_no = rating.student
-JOIN lecturer
-  ON lecturer.id = rating.lecturer;
+FROM 
+    student
+JOIN rating ON student.matriculation_no = rating.student
+JOIN lecturer ON lecturer.id = rating.lecturer
+GROUP BY rating.lecturer
+;
 
 
 -- Call View as select
