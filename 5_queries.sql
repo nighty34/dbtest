@@ -65,7 +65,9 @@ WINDOW rw AS (PARTITION BY rating.student ORDER BY rating.timestamp);
 SELECT
   student.first_name,
   student.last_name,
-  rating.rating
+  rating.rating,
+  lecturer.first_name,
+  lecturer.last_name
 FROM student
 JOIN rating
   ON student.matriculation_no = rating.student
