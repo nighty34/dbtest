@@ -79,7 +79,7 @@ CREATE VIEW lecturer_joel_view AS SELECT
     first_name,
     last_name,
     email_address,
-    short_name,
+    short_name
 FROM
 	lecturer
 WHERE
