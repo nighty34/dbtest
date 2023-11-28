@@ -67,7 +67,7 @@ SELECT
   student.first_name,
   student.last_name,
   rating.rating,
-  lecturer.first_name AS Lfirst_name
+  lecturer.first_name AS Lfirst_name,   
   lecturer.last_name AS Llast_name
 FROM 
     student
