@@ -62,7 +62,7 @@ WINDOW rw AS (PARTITION BY rating.student ORDER BY rating.timestamp);
 
 -- View over 3 tables
 -- View combines 3 tables
-SELECT
+CREATE VIEW ratings SELECT
   student.first_name,
   student.last_name,
   rating.rating,
@@ -75,8 +75,7 @@ JOIN lecturer ON lecturer.id = rating.lecturer;
 
 
 -- Call View as select
-
--- //TODO
+SELECT * from ratings;
 
 
 -- 3.2
