@@ -56,7 +56,7 @@ WINDOW rw AS (PARTITION BY rating.student ORDER BY rating.timestamp);
 --                                   Views                                   --
 -------------------------------------------------------------------------------
 
-
+/*
 
 -- 3.1
 
@@ -74,11 +74,11 @@ FROM
 JOIN rating ON student.matriculation_no = rating.student
 JOIN lecturer ON lecturer.id = rating.lecturer;
 
-/*
+
 -- Call View as select
 SELECT * from ratings;
 
-
+*/
 -- 3.2
 
 -- Updatable View
@@ -101,4 +101,4 @@ WHERE
 
 UPDATE lecturer_joel_view SET first_name = 'Joël' WHERE id = 6;
 
-select * from lecturer;*/
+select * from lecturer;
