@@ -62,13 +62,15 @@ WINDOW rw AS (PARTITION BY rating.student ORDER BY rating.timestamp);
 
 -- View over 3 tables
 -- View combines 3 tables
-SELECT 
-    student.first_name,
-    Count(rw)
-FROM 
-    student
-JOIN rating ON rating.student = student.matriculation_no
-WINDOW rw GROUP BY rating.lecturer
+SELECT
+  student.first_name,
+  student.last_name,
+  rating.rating,
+FROM student
+JOIN rating
+  ON student.matriculation_no = rating.student
+JOIN lecturer
+  ON lecturer.id = rating.lecturer;
 
 
 -- Call View as select
