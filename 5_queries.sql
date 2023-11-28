@@ -57,3 +57,48 @@ WINDOW rw AS (PARTITION BY rating.student ORDER BY rating.timestamp);
 -------------------------------------------------------------------------------
 
 
+
+-- 3.1
+
+-- View over 3 tables
+-- View combines 3 tables
+CREATE VIEW ratings AS
+SELECT
+  student.first_name,
+  student.last_name,
+  rating.rating,
+  lecturer.first_name AS Lfirst_name,   
+  lecturer.last_name AS Llast_name
+FROM 
+    student
+JOIN rating ON student.matriculation_no = rating.student
+JOIN lecturer ON lecturer.id = rating.lecturer;
+
+/*
+-- Call View as select
+SELECT * from ratings;
+
+
+-- 3.2
+
+-- Updatable View
+-- Creates a view that contains all lecturer with the name "Jöel"
+
+
+CREATE VIEW lecturer_joel_view AS SELECT
+    id,
+    first_name,
+    last_name,
+    email_address,
+    short_name
+FROM
+	lecturer
+WHERE
+	first_name = 'Jöel';
+
+
+-- Call View and Update
+
+UPDATE lecturer_joel_view SET first_name = 'Joël' WHERE id = 6;
+
+select * from lecturer;*/
